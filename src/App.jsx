@@ -1,3 +1,4 @@
+import Test from "./Test";
 import "./app.scss";
 import Navbar from "./components/navbar/Navbar";
 
@@ -15,6 +16,7 @@ const App = () => {
       <section>Portfolio3</section>
       <section>Portfolio4</section>
       <section>Contact</section>
+      {/* <Test /> */}
     </div>
   );
 };
