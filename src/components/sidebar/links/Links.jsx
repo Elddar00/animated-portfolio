@@ -1,13 +1,54 @@
+import { motion } from "framer-motion";
+
+const variants = {
+  open: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+  closed: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const itemVariants = {
+  open: {
+    y: 0,
+    opasity: 1,
+  },
+  closed: {
+    y: 50,
+    opasity: 0,
+  },
+};
+
 const Links = () => {
   const items = ["Home", "Usluge", "Nasi Radovi", "Kontakt", "O nama"];
+
+  const handleClick = (event, item) => {
+    event.preventDefault();
+    const targetSection = document.getElementById(item);
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="links">
+    <motion.div className="links" variants={variants}>
       {items.map((item) => (
-        <a href={`#${item}`} key={item}>
+        <motion.a
+          href={`#${item}`}
+          key={item}
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={(event) => handleClick(event, item)}
+        >
           {item}
-        </a>
+        </motion.a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
