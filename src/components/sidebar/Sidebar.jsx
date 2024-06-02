@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { delay, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Links from "./links/Links";
 import "./sidebar.scss";
-import ToggleButton from "./toggleButton/toggleButton";
+import ToggleButton from "./toggleButton/ToggleButton";
 
 const variants = {
   open: {
@@ -25,16 +25,18 @@ const variants = {
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.querySelector(".sidebar");
-    if (sidebar) {
-      sidebar.classList.add("visible"); // Prikaži sidebar nakon što je stranica potpuno učitana
-    }
-  });
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+    <motion.div
+      className={`sidebar ${isLoaded ? "visible" : ""}`}
+      initial="closed"
+      animate={open ? "open" : "closed"}
+    >
       <motion.div className="bg" variants={variants}>
         <Links />
       </motion.div>

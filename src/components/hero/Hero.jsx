@@ -50,7 +50,7 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>KADIR ZILKIC</motion.h2>
           <motion.h1 variants={textVariants}>
-            Specijalista zubar i doktor{" "}
+            Uporiste tvog novog osmeha
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -74,7 +74,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Dentist Because SMILE
+        SMILE SMILE SMILE SMILE
       </motion.div>
       <div className="imageContainer">
         <img src="kadir12.png" alt="" />

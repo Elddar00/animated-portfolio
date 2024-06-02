@@ -3,7 +3,8 @@
 .hero {
   height: calc(100vh - 100px);
   overflow: hidden;
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  //   background: linear-gradient(180deg, #0c0c1d, #111132);
+  background-color: #383d46;
   position: relative;
 
   .wrapper {
@@ -29,7 +30,7 @@
 
       h2 {
         font-size: 30px;
-        color: rebeccapurple;
+        color: black;
         letter-spacing: 10px;
       }
 
