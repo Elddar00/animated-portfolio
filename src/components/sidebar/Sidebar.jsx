@@ -26,6 +26,13 @@ const variants = {
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    if (sidebar) {
+      sidebar.classList.add("visible"); // Prikaži sidebar nakon što je stranica potpuno učitana
+    }
+  });
+
   return (
     <motion.div className="sidebar" animate={open ? "open" : "closed"}>
       <motion.div className="bg" variants={variants}>
