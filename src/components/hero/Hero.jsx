@@ -48,9 +48,10 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>KADIR ZILKIC</motion.h2>
+          {/* <motion.h2 variants={textVariants}>KADIR ZILKIC</motion.h2> */}
+          <img className="potpis" src="potpis.PNG" alt="Potpis" />
           <motion.h1 variants={textVariants}>
-            Uporiste tvog novog osmeha
+            Uporište tvog novog osmeha
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -77,7 +78,7 @@ const Hero = () => {
         SMILE SMILE SMILE SMILE
       </motion.div>
       <div className="imageContainer">
-        <img src="kadir12.png" alt="" />
+        <img src="profilna2.png" alt="" />
       </div>
     </div>
   );
