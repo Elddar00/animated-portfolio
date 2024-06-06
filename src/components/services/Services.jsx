@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 const variants = {
   initial: {
@@ -43,9 +44,21 @@ export const Services = () => {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           {/* <img src="/osmeh1.CR2" alt="" /> */}
-          <img src="/osmeh01.jpg" alt="" />
+          {/* <img src="/osmeh01.jpg" alt="" /> */}
+          <ImgComparisonSlider
+            style={{
+              width: "300px",
+              height: "100px",
+              borderRadius: "50px",
+              objectFit: "cover",
+            }}
+            hover="hover"
+          >
+            <img slot="first" src="/zubi-slajder2.jpg" />
+            <img slot="second" src="/zubi-slajder.CR2" />
+          </ImgComparisonSlider>
           <h1>
-            <motion.b whileHover={{ color: "black" }}>Postignite</motion.b>{" "}
+            <motion.b whileHover={{ color: "black" }}>Postignite</motion.b>
             Osmeh
           </h1>
         </div>
@@ -61,7 +74,7 @@ export const Services = () => {
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Endodoncija</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -75,7 +88,7 @@ export const Services = () => {
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Paradontologija</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -89,7 +102,7 @@ export const Services = () => {
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Decija Stomatologija</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -103,7 +116,7 @@ export const Services = () => {
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Ortodoncija</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus

@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import "./portfolio.scss";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
     id: 1,
     title: "Zubarski Zahvat 1",
-    img: "https://www.pexels.com/photo/young-woman-holding-a-dental-instrument-and-smiling-11928561/",
+    img: "https://images.pexels.com/photos/11928561/pexels-photo-11928561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi harum qui error dolores. Iste cumque asperiores illum, aliquid tempore qui.",
   },
   {
@@ -30,7 +30,29 @@ const items = [
 ];
 
 const Single = ({ item }) => {
-  return <section>{item.title}</section>;
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    // offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  return (
+    <section>
+      <div className="container">
+        <div className="wrapper">
+          <div className="imageContainer" ref={ref}>
+            <img src={item.img} alt="" />
+          </div>
+          <motion.div className="textContainer" style={{ y }}>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button>See Demo</button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export const Portfolio = () => {
