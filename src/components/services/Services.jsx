@@ -32,7 +32,7 @@ export const Services = () => {
       //   animate="animate"
       //   whileInView="animate"
       ref={ref}
-      animate={isInView && "animate"}
+      animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
@@ -43,22 +43,21 @@ export const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          {/* <img src="/osmeh1.CR2" alt="" /> */}
-          {/* <img src="/osmeh01.jpg" alt="" /> */}
           <ImgComparisonSlider
-            style={{
-              width: "300px",
-              height: "100px",
-              borderRadius: "50px",
-              objectFit: "cover",
-            }}
+            // style={{
+            //   width: "300px",
+            //   height: "100px",
+            //   borderRadius: "50px",
+            //   objectFit: "cover",
+            // }}
             hover="hover"
+            className="imgComparisonSlider"
           >
             <img slot="first" src="/zubi-slajder2.jpg" />
             <img slot="second" src="/zubi-slajder.CR2" />
           </ImgComparisonSlider>
           <h1>
-            <motion.b whileHover={{ color: "black" }}>Postignite</motion.b>
+            <motion.b whileHover={{ color: "black" }}>Postignite </motion.b>
             Osmeh
           </h1>
         </div>

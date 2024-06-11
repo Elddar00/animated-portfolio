@@ -13,7 +13,7 @@ export const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Kadir Zilkic */}
+          Kadir Zilkic
         </motion.span>
         <div className="social">
           <a href="#">
