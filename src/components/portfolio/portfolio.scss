@@ -59,7 +59,7 @@
           object-fit: cover;
 
           @include mobile {
-            // margin-top: 10px;
+            margin-top: 10px;
             object-fit: contain;
           }
         }
