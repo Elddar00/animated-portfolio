@@ -68,12 +68,26 @@ export const Services = () => {
           <button>Sta mi radimo?</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
+      <motion.div
+        className="listContainer"
+        variants={variants}
+        style={{ justifyContent: "center" }}
+      >
         <motion.div
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
           <h2>Endodoncija</h2>
+          <img
+            src="/endodoncija.JPG"
+            alt="Opis slike"
+            style={{
+              width: "300px",
+              height: "200px",
+              objectFit: "cover",
+              borderRadius: "10px",
+            }}
+          />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -81,13 +95,23 @@ export const Services = () => {
             optio debitis nobis labore maxime natus reiciendis aspernatur
             repudiandae praesentium.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
           <h2>Paradontologija</h2>
+          <img
+            src="/paradontologija.PNG"
+            alt="Opis slike"
+            style={{
+              width: "300px",
+              height: "200px",
+              objectFit: "cover",
+              borderRadius: "10px",
+            }}
+          />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -95,13 +119,23 @@ export const Services = () => {
             optio debitis nobis labore maxime natus reiciendis aspernatur
             repudiandae praesentium.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
           <h2>Decija Stomatologija</h2>
+          <img
+            src="/decija_stomatologija.JPG"
+            alt="Opis slike"
+            style={{
+              width: "300px",
+              height: "200px",
+              objectFit: "cover",
+              borderRadius: "10px",
+            }}
+          />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -109,13 +143,23 @@ export const Services = () => {
             optio debitis nobis labore maxime natus reiciendis aspernatur
             repudiandae praesentium.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "white", color: "black" }}
         >
           <h2>Ortodoncija</h2>
+          <img
+            src="/ortondoncija.JPG"
+            alt="Opis slike"
+            style={{
+              width: "300px",
+              height: "200px",
+              objectFit: "cover",
+              borderRadius: "10px",
+            }}
+          />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Consequuntur pariatur optio debitis nobis labore maxime natus
@@ -123,7 +167,7 @@ export const Services = () => {
             optio debitis nobis labore maxime natus reiciendis aspernatur
             repudiandae praesentium.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
       </motion.div>
     </motion.div>

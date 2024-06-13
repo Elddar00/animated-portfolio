@@ -16,10 +16,18 @@ export const Navbar = () => {
           Kadir Zilkic
         </motion.span>
         <div className="social">
-          <a href="#">
+          <a
+            href="https://www.facebook.com/kadir.zilkic.752?mibextid=LQQJ4d"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/facebook.png" alt="Facebook" />
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com/kardijuve?igsh=dG9uMmJkb3RoYnNr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/instagram.png" alt="Instagram" />
           </a>
           <a
@@ -29,9 +37,9 @@ export const Navbar = () => {
           >
             <img src="/youtube.png" alt="YouTube" />
           </a>
-          <a href="#">
+          {/* <a href="#">
             <img src="/dribbble.png" alt="Dribbble" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
