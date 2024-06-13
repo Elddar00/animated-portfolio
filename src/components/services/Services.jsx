@@ -66,7 +66,7 @@ export const Services = () => {
       >
         <motion.div
           className="box"
-          whileHover={{ background: "white", color: "black" }}
+          // whileHover={{ background: "white", color: "black" }}
         >
           <h2>Endodoncija</h2>
           <img
@@ -90,7 +90,7 @@ export const Services = () => {
         </motion.div>
         <motion.div
           className="box"
-          whileHover={{ background: "white", color: "black" }}
+          // whileHover={{ background: "white", color: "black" }}
         >
           <h2>Paradontologija</h2>
           <img
@@ -138,7 +138,7 @@ export const Services = () => {
         </motion.div>
         <motion.div
           className="box"
-          whileHover={{ background: "white", color: "black" }}
+          // whileHover={{ background: "white", color: "black" }}
         >
           <h2>Ortodoncija</h2>
           <img
