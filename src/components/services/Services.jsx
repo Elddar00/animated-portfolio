@@ -42,17 +42,8 @@ export const Services = () => {
         <hr />
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <ImgComparisonSlider
-            // style={{
-            //   width: "300px",
-            //   height: "100px",
-            //   borderRadius: "50px",
-            //   objectFit: "cover",
-            // }}
-            hover="hover"
-            className="imgComparisonSlider"
-          >
+        {/* <div className="title">
+          <ImgComparisonSlider hover="hover" className="imgComparisonSlider">
             <img slot="first" src="/zubi-slajder2.jpg" />
             <img slot="second" src="/zubi-slajder.CR2" />
           </ImgComparisonSlider>
@@ -66,7 +57,7 @@ export const Services = () => {
             <motion.b whileHover={{ color: "black" }}>Svojih</motion.b> Snova.
           </h1>
           <button>Sta mi radimo?</button>
-        </div>
+        </div> */}
       </motion.div>
       <motion.div
         className="listContainer"
