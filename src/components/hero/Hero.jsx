@@ -51,7 +51,7 @@ const Hero = () => {
           {/* <motion.h2 variants={textVariants}>KADIR ZILKIC</motion.h2> */}
           <img className="potpis" src="potpis.PNG" alt="Potpis" />
           <motion.h1 variants={textVariants}>
-            Uporište tvog novog osmeha
+            Jednostavnost moderne stomatologije
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>

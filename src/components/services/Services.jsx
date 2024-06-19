@@ -73,20 +73,20 @@ export const Services = () => {
             src="/endodoncija.JPG"
             alt="Opis slike"
             style={{
-              width: "300px",
-              height: "200px",
+              width: "200px",
+              height: "100px",
               objectFit: "cover",
               borderRadius: "10px",
             }}
           />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur pariatur optio debitis nobis labore maxime natus
-            reiciendis aspernatur repudiandae praesentium. Consequuntur pariatur
-            optio debitis nobis labore maxime natus reiciendis aspernatur
-            repudiandae praesentium.
+            Endodoncija je specijalizovana grana stomatologije koja se fokusira
+            na zdravlje unutrašnjih struktura zuba, posebno zubne pulpe i
+            okolnog tkiva. Ako ste ikada imali bol u zubu koji se širi do vilice
+            ili oticanje oko zuba, verovatno ste se susreli sa problemom koji
+            zahteva endodontski tretman.
           </p>
-          {/* <button>Go</button> */}
+          <button>Vise o Endodonciji...</button>
         </motion.div>
         <motion.div
           className="box"
@@ -97,20 +97,21 @@ export const Services = () => {
             src="/paradontologija.PNG"
             alt="Opis slike"
             style={{
-              width: "300px",
-              height: "200px",
+              width: "200px",
+              height: "100px",
               objectFit: "cover",
               borderRadius: "10px",
             }}
           />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur pariatur optio debitis nobis labore maxime natus
-            reiciendis aspernatur repudiandae praesentium. Consequuntur pariatur
-            optio debitis nobis labore maxime natus reiciendis aspernatur
-            repudiandae praesentium.
+            Parodontologija je specijalizovana grana stomatologije koja se bavi
+            prevencijom, dijagnostikom i lečenjem bolesti potpornih struktura
+            zuba, uključujući desni, alveolarnu kost, cementum i parodontni
+            ligament. Zdravlje ovih struktura je ključno za dugovečnost i
+            funkcionalnost zuba, a parodontološka terapija igra vitalnu ulogu u
+            očuvanju oralnog zdravlja.
           </p>
-          {/* <button>Go</button> */}
+          <button>Vise o Paradontologiji...</button>
         </motion.div>
         <motion.div
           className="box"
@@ -121,20 +122,21 @@ export const Services = () => {
             src="/decija_stomatologija.JPG"
             alt="Opis slike"
             style={{
-              width: "300px",
-              height: "200px",
+              width: "200px",
+              height: "100px",
               objectFit: "cover",
               borderRadius: "10px",
             }}
           />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur pariatur optio debitis nobis labore maxime natus
-            reiciendis aspernatur repudiandae praesentium. Consequuntur pariatur
-            optio debitis nobis labore maxime natus reiciendis aspernatur
-            repudiandae praesentium.
+            Dečija stomatologija, poznata i kao pedijatrijska stomatologija,
+            specijalizovana je grana stomatologije koja se fokusira na oralno
+            zdravlje dece od ranog detinjstva do adolescencije. Kroz preventivne
+            mere, dijagnostiku i lečenje, dečiji stomatolozi pomažu u očuvanju
+            zdravlja zuba i desni kod dece, postavljajući temelje za dugoročno
+            oralno zdravlje.
           </p>
-          {/* <button>Go</button> */}
+          <button>Vise o Decijoj Stomatologiji...</button>
         </motion.div>
         <motion.div
           className="box"
@@ -145,20 +147,19 @@ export const Services = () => {
             src="/ortondoncija.JPG"
             alt="Opis slike"
             style={{
-              width: "300px",
-              height: "200px",
+              width: "200px",
+              height: "100px",
               objectFit: "cover",
               borderRadius: "10px",
             }}
           />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur pariatur optio debitis nobis labore maxime natus
-            reiciendis aspernatur repudiandae praesentium. Consequuntur pariatur
-            optio debitis nobis labore maxime natus reiciendis aspernatur
-            repudiandae praesentium.
+            Ortodoncija je specijalizovana grana stomatologije koja se bavi
+            dijagnostikom, prevencijom i lečenjem nepravilnosti u položaju zuba
+            i vilica. Osim estetskih poboljšanja, ortodontski tretmani doprinose
+            ukupnom oralnom zdravlju, funkcionalnosti i dugovečnosti zuba.
           </p>
-          {/* <button>Go</button> */}
+          <button>Vise o Ortodonciji...</button>
         </motion.div>
       </motion.div>
     </motion.div>
