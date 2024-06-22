@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./app.scss";
-import Endodoncija from "./components/endodoncija/endodoncija.jsx";
+import Endodoncija from "./components/endodoncija/Endodoncija.jsx";
 
 const router = createBrowserRouter([
   {
