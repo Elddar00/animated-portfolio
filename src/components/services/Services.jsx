@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
+import { useNavigate } from "react-router-dom";
 
 const variants = {
   initial: {
@@ -22,6 +23,12 @@ const variants = {
 
 export const Services = () => {
   const ref = useRef();
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/endodoncija");
+  };
 
   const isInView = useInView(ref, { margin: "-100px" });
   return (
@@ -86,7 +93,7 @@ export const Services = () => {
             ili oticanje oko zuba, verovatno ste se susreli sa problemom koji
             zahteva endodontski tretman.
           </p>
-          <button>Vise o Endodonciji...</button>
+          <button onClick={handleButtonClick}>Vise o Endodonciji...</button>
         </motion.div>
         <motion.div
           className="box"
