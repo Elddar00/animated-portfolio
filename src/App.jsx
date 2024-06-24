@@ -19,9 +19,9 @@ const App = () => {
       <section>
         <Services />
       </section>
-      {/* <section id="Nasi Radovi">
+      <section id="Nasi Radovi">
         <Parallax type="portfolio" />
-      </section> */}
+      </section>
       <Portfolio />
       <section id="Kontakt">
         <Contact />

@@ -26,8 +26,8 @@ export const Services = () => {
 
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    navigate("/endodoncija");
+  const handleButtonClick = (path) => {
+    navigate(path);
   };
 
   const isInView = useInView(ref, { margin: "-100px" });
@@ -93,7 +93,9 @@ export const Services = () => {
             ili oticanje oko zuba, verovatno ste se susreli sa problemom koji
             zahteva endodontski tretman.
           </p>
-          <button onClick={handleButtonClick}>Vise o Endodonciji...</button>
+          <button onClick={() => handleButtonClick("/endodoncija")}>
+            Vise o Endodonciji...
+          </button>
         </motion.div>
         <motion.div
           className="box"
@@ -122,7 +124,7 @@ export const Services = () => {
         </motion.div>
         <motion.div
           className="box"
-          whileHover={{ background: "white", color: "black" }}
+          // whileHover={{ background: "white", color: "black" }}
         >
           <h2>Decija Stomatologija</h2>
           <img
