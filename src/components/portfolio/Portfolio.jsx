@@ -52,7 +52,12 @@ const Single = ({ item }) => {
         <div className="wrapper">
           <div className="mediaContainer" ref={ref}>
             {item.video ? (
-              <video controls playsInline onClick={handleVideoClick}>
+              <video
+                controls
+                playsInline
+                onClick={handleVideoClick}
+                style={{ display: "block" }}
+              >
                 <source src={item.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
