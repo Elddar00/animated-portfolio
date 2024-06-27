@@ -1,5 +1,7 @@
+import React from "react";
 import { useRef } from "react";
 import "./portfolio.scss";
+import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
@@ -30,6 +32,8 @@ const items = [
 ];
 
 const Single = ({ item }) => {
+  const [playVideo, setPlayVideo] = React.useState(false);
+  const vidRef = React.useRef();
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -37,12 +41,12 @@ const Single = ({ item }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
-  const handleVideoClick = (e) => {
-    const video = e.target;
-    if (video.paused) {
-      video.play();
+  const handleVideoClick = () => {
+    setPlayVideo(!playVideo);
+    if (playVideo) {
+      vidRef.current.pause();
     } else {
-      video.pause();
+      vidRef.current.play();
     }
   };
 
@@ -52,15 +56,26 @@ const Single = ({ item }) => {
         <div className="wrapper">
           <div className="mediaContainer" ref={ref}>
             {item.video ? (
-              <video
-                controls
-                playsInline
-                onClick={handleVideoClick}
-                style={{ display: "block" }}
-              >
-                <source src={item.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <div className="video-wrapper">
+                <video
+                  ref={vidRef}
+                  src={item.video}
+                  type="video/mp4"
+                  loop
+                  muted
+                  playsInline
+                  style={{ display: "block" }}
+                />
+                <div className="video-overlay" onClick={handleVideoClick}>
+                  <div className="video-overlay-circle">
+                    {playVideo ? (
+                      <BsPauseFill color="#fff" fontSize={30} />
+                    ) : (
+                      <BsFillPlayFill color="#fff" fontSize={30} />
+                    )}
+                  </div>
+                </div>
+              </div>
             ) : (
               <img src={item.img} alt={item.title} />
             )}
