@@ -71,10 +71,7 @@ export const Services = () => {
         variants={variants}
         style={{ justifyContent: "center" }}
       >
-        <motion.div
-          className="box"
-          // whileHover={{ background: "white", color: "black" }}
-        >
+        <motion.div className="box">
           <h2>Endodoncija</h2>
           <img
             src="/endodoncija.JPG"
@@ -84,7 +81,9 @@ export const Services = () => {
               height: "100px",
               objectFit: "cover",
               borderRadius: "10px",
+              cursor: "pointer",
             }}
+            onClick={() => handleButtonClick("/endodoncija")}
           />
           <p>
             Endodoncija je specijalizovana grana stomatologije koja se fokusira
@@ -93,7 +92,10 @@ export const Services = () => {
             ili oticanje oko zuba, verovatno ste se susreli sa problemom koji
             zahteva endodontski tretman.
           </p>
-          <button onClick={() => handleButtonClick("/endodoncija")}>
+          <button
+            className="desktop-only"
+            onClick={() => handleButtonClick("/endodoncija")}
+          >
             Vise o Endodonciji...
           </button>
         </motion.div>
