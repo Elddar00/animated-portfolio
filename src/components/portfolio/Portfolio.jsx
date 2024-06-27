@@ -36,13 +36,23 @@ const Single = ({ item }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  const handleVideoClick = (e) => {
+    const video = e.target;
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  };
+
   return (
     <section>
       <div className="container">
         <div className="wrapper">
           <div className="mediaContainer" ref={ref}>
             {item.video ? (
-              <video controls>
+              <video controls playsInline onClick={handleVideoClick}>
                 <source src={item.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -75,7 +85,6 @@ export const Portfolio = () => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        {/* <h1>Galerija osmeha :</h1> */}
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
