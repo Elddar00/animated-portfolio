@@ -150,6 +150,10 @@
         transform: translateY(-130px);
       }
 
+      @include iphone15ProMax {
+        transform: translateY(-100px);
+      }
+
       h2 {
         padding: 10px;
         display: flex;
