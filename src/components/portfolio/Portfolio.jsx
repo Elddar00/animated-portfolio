@@ -6,7 +6,7 @@ const items = [
   {
     id: 1,
     title: "Zubarski Zahvat 1",
-    img: "https://images.pexels.com/photos/11928561/pexels-photo-11928561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    video: "kadir1.MP4",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi harum qui error dolores. Iste cumque asperiores illum, aliquid tempore qui.",
   },
   {
@@ -33,7 +33,6 @@ const Single = ({ item }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-    // offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
@@ -41,8 +40,15 @@ const Single = ({ item }) => {
     <section>
       <div className="container">
         <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
+          <div className="mediaContainer" ref={ref}>
+            {item.video ? (
+              <video controls>
+                <source src={item.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img src={item.img} alt={item.title} />
+            )}
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
@@ -69,7 +75,7 @@ export const Portfolio = () => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>Galerija osmeha :</h1>
+        {/* <h1>Galerija osmeha :</h1> */}
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
