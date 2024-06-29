@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import "./portfolio.scss";
 import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
@@ -14,7 +14,7 @@ const items = [
   {
     id: 2,
     title: "Zubarski Zahvat 2",
-    img: "https://images.pexels.com/photos/11928559/pexels-photo-11928559.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    video: "kadir2.MP4",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi harum qui error dolores. Iste cumque asperiores illum, aliquid tempore qui.",
   },
   {
@@ -32,14 +32,39 @@ const items = [
 ];
 
 const Single = ({ item }) => {
-  const [playVideo, setPlayVideo] = React.useState(false);
-  const vidRef = React.useRef();
+  const [playVideo, setPlayVideo] = useState(false);
+  const vidRef = useRef();
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          vidRef.current.play();
+          setPlayVideo(true);
+        } else {
+          vidRef.current.pause();
+          setPlayVideo(false);
+        }
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    );
+
+    if (vidRef.current) {
+      observer.observe(vidRef.current);
+    }
+
+    return () => {
+      if (vidRef.current) {
+        observer.unobserve(vidRef.current);
+      }
+    };
+  }, []);
 
   const handleVideoClick = () => {
     setPlayVideo(!playVideo);
@@ -66,15 +91,13 @@ const Single = ({ item }) => {
                   playsInline
                   style={{ display: "block" }}
                 />
-                <div className="video-overlay" onClick={handleVideoClick}>
-                  <div className="video-overlay-circle">
-                    {playVideo ? (
-                      <BsPauseFill color="#fff" fontSize={30} />
-                    ) : (
+                {!playVideo && (
+                  <div className="video-overlay" onClick={handleVideoClick}>
+                    <div className="video-overlay-circle">
                       <BsFillPlayFill color="#fff" fontSize={30} />
-                    )}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ) : (
               <img src={item.img} alt={item.title} />
