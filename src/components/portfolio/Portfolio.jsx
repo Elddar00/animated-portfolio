@@ -33,6 +33,7 @@ const items = [
 
 const Single = ({ item }) => {
   const [playVideo, setPlayVideo] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const vidRef = useRef();
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -52,7 +53,7 @@ const Single = ({ item }) => {
           setPlayVideo(false);
         }
       },
-      { threshold: 0.5 } // Adjust threshold as needed
+      { threshold: 0.5 }
     );
 
     if (vidRef.current) {
@@ -68,12 +69,20 @@ const Single = ({ item }) => {
 
   const handleVideoClick = () => {
     setPlayVideo(!playVideo);
+    setIsMuted(!isMuted);
     if (playVideo) {
       vidRef.current.pause();
     } else {
       vidRef.current.play();
+      vidRef.current.muted = false; // Ensure the video is not muted
     }
   };
+
+  useEffect(() => {
+    if (vidRef.current) {
+      vidRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
 
   return (
     <section>
@@ -87,8 +96,8 @@ const Single = ({ item }) => {
                   src={item.video}
                   type="video/mp4"
                   loop
-                  muted
                   playsInline
+                  controls // Add controls attribute
                   style={{ display: "block" }}
                 />
                 {!playVideo && (
