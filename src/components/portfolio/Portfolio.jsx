@@ -20,13 +20,13 @@ const items = [
   {
     id: 3,
     title: "Zubarski Zahvat 3",
-    img: "https://images.pexels.com/photos/11956995/pexels-photo-11956995.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    video: "kadir3.MP4",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi harum qui error dolores. Iste cumque asperiores illum, aliquid tempore qui.",
   },
   {
     id: 4,
     title: "Zubarski Zahvat 4",
-    img: "https://images.pexels.com/photos/11956994/pexels-photo-11956994.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    video: "kadir5.MP4",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi harum qui error dolores. Iste cumque asperiores illum, aliquid tempore qui.",
   },
 ];
