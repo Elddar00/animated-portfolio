@@ -67,15 +67,6 @@ const Single = ({ item }) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (vidRef.current) {
-      vidRef.current.muted = isMuted;
-      if (!isMuted) {
-        vidRef.current.play(); // Ensure the video starts playing when unmuted
-      }
-    }
-  }, [isMuted]);
-
   const handleVideoClick = () => {
     setPlayVideo(!playVideo);
     setIsMuted(!isMuted);
@@ -83,8 +74,15 @@ const Single = ({ item }) => {
       vidRef.current.pause();
     } else {
       vidRef.current.play();
+      vidRef.current.muted = false; // Ensure the video is not muted
     }
   };
+
+  useEffect(() => {
+    if (vidRef.current) {
+      vidRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
 
   return (
     <section>
@@ -99,8 +97,7 @@ const Single = ({ item }) => {
                   type="video/mp4"
                   loop
                   playsInline
-                  autoPlay // Ensure video auto-plays
-                  muted={isMuted} // Bind muted attribute to state
+                  controls // Add controls attribute
                   style={{ display: "block" }}
                 />
                 {!playVideo && (
