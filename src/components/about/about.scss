@@ -1,0 +1,191 @@
+@import "../../app.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+
+  @include mobile {
+    gap: 80px;
+    margin: 70px 70px;
+    align-items: start;
+  }
+}
+
+.aboutTitle {
+  position: relative;
+
+  h1 {
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    background: linear-gradient(
+      120deg,
+      #3a3a3a -10%,
+      #ff6f61 50%,
+      #f0e68c 110%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include mobile {
+      font-size: 50px;
+      padding: 5;
+    }
+  }
+}
+
+.aboutSection {
+  display: flex;
+  gap: 80px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.aboutLeft {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    display: none;
+  }
+
+  img {
+    width: 70%; //menjao 70%
+    margin-right: 20px;
+  }
+}
+
+.aboutRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+.aboutPara {
+  font-size: 18px;
+  //   font-weight: 500;
+
+  @include mobile {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.aboutSkills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .aboutSkill {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    transition: 0.3s;
+
+    @include mobile {
+      gap: 20px;
+      align-items: center;
+    }
+
+    p {
+      min-width: 150px;
+      font-size: 18px;
+      font-weight: 500;
+
+      @include mobile {
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+
+    hr {
+      outline: none;
+      border: none;
+      width: 50%;
+      height: 8px;
+      border-radius: 50px;
+      background: linear-gradient(
+        120deg,
+        #3a3a3a -10%,
+        #ff6f61 50%,
+        #f0e68c 110%
+      );
+
+      @include mobile {
+        height: 4px;
+      }
+    }
+  }
+}
+
+.aboutAchievements {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 80px;
+
+  @include mobile {
+    justify-content: space-between;
+  }
+
+  .aboutAchievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+    // font-size: 26px; //dodao
+
+    @include mobile {
+      gap: 10px;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+      background: linear-gradient(
+        120deg,
+        #3a3a3a -10%,
+        #ff6f61 50%,
+        #f0e68c 110%
+      );
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include mobile {
+        font-size: 34px;
+        font-weight: 700;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 500;
+
+      @include mobile {
+        text-align: center;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.aboutSkill:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.aboutAchievement:hover {
+  transform: scale(1.12);
+  transition: 0.5s;
+}
