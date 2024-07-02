@@ -13,29 +13,38 @@ function About() {
         <div className="aboutRight">
           <div className="aboutPara">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
-              similique enim facilis error ipsa incidunt ducimus corporis omnis
-              ab quaerat.
+              Kadir Zilkić, rođen 11. aprila 1991. godine u Tutinu. Nakon
+              završene osnovne škole "Vuk Karadžić" u Tutinu, jednu godinu
+              srednje škole završio je u medresi Gazi Isa-beg u Novom Pazaru,
+              dok je preostale tri godine završio u medresi Sinan-beg, koja se
+              takođe nalazi u Novom Pazaru.
             </p>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
-              similique enim facilis error ipsa incidunt ducimus corporis omnis
-              ab quaerat.
+              Godine 2009. počeo je sa učenjem jezika na Ankara univerzitetu
+              TÖMER, isturenom odeljenju u Izmiru. Godine 2010. započeo je
+              studije na Istanbul univerzitetu, koji je osnovan 1453. godine i
+              najstariji je univerzitet u Turskoj, na Stomatološkom fakultetu,
+              koji je osnovan davne 1908. godine. Studije je završio 2016.
+              godine i iste godine počeo je raditi na klinici "Kemal Ömür".
+              Godine 2017. počeo je raditi na Naturadent klinici koja se takođe
+              nalazi u Istanbulu. Godine 2018. počeo je raditi na klinici
+              Dentisyon i u isto vreme radio na dve klinike.
             </p>
           </div>
           <div className="aboutSkills">
             <div className="aboutSkill">
-              <p>Stručnost u dijagnostici</p> <hr style={{ width: "50%" }} />
-            </div>
-            <div className="aboutSkill">
-              <p>Lečenje zubnih oboljenja</p> <hr style={{ width: "70%" }} />
-            </div>
-            <div className="aboutSkill">
-              <p>Estetska stomatologija</p> <hr style={{ width: "60%" }} />
-            </div>
-            <div className="aboutSkill">
-              <p>Komunikacione veštine</p> <hr style={{ width: "50%" }} />
+              <p>
+                Godine 2020. istovremeno radeći na dve klinike, počeo je raditi
+                i na Dentavie klinici koja se nalazi u Istanbulu. U periodu od
+                2018. do 2020. učestvovao je na 30 kurseva iz različitih oblasti
+                stomatologije.
+              </p>
+              <p>
+                Godine 2021. osnovao je stomatološku ordinaciju Dentica World u
+                Novom Pazaru i nastavio je raditi na dve klinike u Istanbulu, u
+                part-time obliku.
+              </p>
             </div>
           </div>
         </div>
