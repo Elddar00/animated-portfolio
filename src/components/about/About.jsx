@@ -51,17 +51,17 @@ function About() {
       </div>
       <div className="aboutAchievements">
         <div className="aboutAchievement">
-          <h1>10+</h1>
+          <h1>8+</h1>
           <p>Godina Iskustva</p>
         </div>
         <hr />
         <div className="aboutAchievement">
-          <h1>90+</h1>
-          <p>Zavrsenih Projekata</p>
+          <h1>30+</h1>
+          <p>Edukacije</p>
         </div>
         <hr />
         <div className="aboutAchievement">
-          <h1>89+</h1>
+          <h1>1223+</h1>
           <p>Zadovoljnih Klijenata</p>
         </div>
       </div>

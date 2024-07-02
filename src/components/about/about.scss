@@ -11,7 +11,7 @@
   @include mobile {
     gap: 80px;
     margin: 280px 30px; //70
-    align-items: start;
+    align-items: center;
   }
 }
 
@@ -57,6 +57,7 @@
   }
 
   img {
+    display: none;
     width: 100%; //menjao 70%
     margin-right: 20px;
   }
