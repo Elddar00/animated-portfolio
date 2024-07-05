@@ -54,12 +54,12 @@ const Hero = () => {
             Jednostavnost moderne stomatologije
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            {/* <motion.button variants={textVariants}>
               Vidi moje radove
-            </motion.button>
-            <motion.button variants={textVariants}>
+            </motion.button> */}
+            {/* <motion.button variants={textVariants}>
               Kontaktiraj me
-            </motion.button>
+            </motion.button> */}
           </motion.div>
           <motion.img
             variants={textVariants}

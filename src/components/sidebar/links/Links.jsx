@@ -26,7 +26,7 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ["Home", "Usluge", "Nasi Radovi", "Kontakt"];
+  const items = ["Home", "O Meni", "Nasi Radovi", "Kontakt"];
 
   const handleClick = (event, item) => {
     event.preventDefault();
