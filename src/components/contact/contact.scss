@@ -39,6 +39,12 @@
     span {
       font-weight: 300;
     }
+
+    .potpis {
+      margin-top: -100px;
+      width: 200px; // Podesi širinu
+      height: auto; // Održava odnos širine i visine
+    }
   }
 
   .formContainer {

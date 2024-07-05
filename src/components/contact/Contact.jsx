@@ -33,18 +33,19 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Vaš osmeh, naša misija.</motion.h1>
+        {/* <motion.h1 variants={variants}>Vaš osmeh, naša misija.</motion.h1> */}
+        <img className="potpis" src="potpis.PNG" alt="Potpis" />
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@gmail.com</span>
+          <span>kadirjuve@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Adresa</h2>
-          <span>hello street Novi Pazar</span>
+          <span>7 Jul Novi Pazar</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Kontakt</h2>
-          <span>+381 007 007</span>
+          <span>+381 62 300 110</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
