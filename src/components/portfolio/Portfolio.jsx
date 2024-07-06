@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./portfolio.scss";
-import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
+import {
+  BsFillPlayFill,
+  BsFillVolumeMuteFill,
+  BsFillVolumeUpFill,
+} from "react-icons/bs";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
@@ -33,6 +36,7 @@ const items = [
 
 const Single = ({ item }) => {
   const [playVideo, setPlayVideo] = useState(false);
+  const [muted, setMuted] = useState(true);
   const vidRef = useRef();
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -75,6 +79,11 @@ const Single = ({ item }) => {
     }
   };
 
+  const handleMuteClick = () => {
+    setMuted(!muted);
+    vidRef.current.muted = !muted;
+  };
+
   return (
     <section>
       <div className="container">
@@ -87,6 +96,7 @@ const Single = ({ item }) => {
                   src={item.video}
                   type="video/mp4"
                   loop
+                  muted={muted}
                   playsInline
                   style={{ display: "block" }}
                 />
@@ -97,6 +107,15 @@ const Single = ({ item }) => {
                     </div>
                   </div>
                 )}
+                <div className="video-controls">
+                  <button onClick={handleMuteClick}>
+                    {muted ? (
+                      <BsFillVolumeMuteFill color="#fff" fontSize={30} />
+                    ) : (
+                      <BsFillVolumeUpFill color="#fff" fontSize={30} />
+                    )}
+                  </button>
+                </div>
               </div>
             ) : (
               <img src={item.img} alt={item.title} />

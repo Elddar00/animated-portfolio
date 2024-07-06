@@ -105,6 +105,32 @@
           width: 60px;
           height: 60px;
         }
+
+        .video-controls {
+          position: absolute;
+          top: 10px; /* Adjust as needed */
+          right: 10px; /* Adjust as needed */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .video-controls button {
+          background: rgba(0, 0, 0, 0.5);
+          border: none;
+          border-radius: 50%;
+          padding: 10px;
+          color: white;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.3s ease;
+        }
+
+        .video-controls button:hover {
+          background: rgba(0, 0, 0, 0.7);
+        }
       }
 
       .textContainer {
