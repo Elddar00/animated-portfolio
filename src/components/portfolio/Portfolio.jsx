@@ -87,7 +87,6 @@ const Single = ({ item }) => {
                   src={item.video}
                   type="video/mp4"
                   loop
-                  muted
                   playsInline
                   style={{ display: "block" }}
                 />
